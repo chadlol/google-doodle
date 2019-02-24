@@ -1,12 +1,326 @@
-/*
-  DIAGNOSTIC STYLING
-*/
+/* External styling from: https://codepen.io/manikoth/pen/NNNBYe.css
+ */
+
+/* DO NOT EDIT BELOW THIS LINE */
+
+html, body { 
+  height: 100%;
+}
+
 body {
-  background: gray;
+	width: 100%;
+	margin: 0;
+	display: flex;
+	align-items: center;
+  justify-content: center;
 }
 
-* {
-  outline: 1px dotted black;
+#search {
+  text-align: center;
 }
 
-/* Your Awesome Scripts */
+button {
+  display: inline-block;
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+  color: #757575;
+  cursor: default;
+  font-family: arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: .5em 1em;
+  text-align: center;
+}
+
+input {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACrElEQVR42u2Xz2sTQRSAX8VSb1K8iNqKooJH2Ux6Ksn+iPQqxZMIehJB0do/IMhmQWsvHr2KSEGk0tSLIoWIYNUKij20F2/N7iaUZnYT0kYzzhMKs0HDJiTdLcwHDwKZSd63781LBiQSSW9JZdkhzfKm1Rz9mjZp/W9YdEU3vXv4HsQZ40FtNG36q5rls//Ej4tmbSS2T15Mvp3ExOPmEMQNbBtMMEyoljcFcQN7PqyAlqNfIG7gYQ0tYNIaxA1MrJPY3wImbUqBKAXSFv0tBSIVMOkvKRDtGKWN/T6FdqRAxFNoWwpEPIXqUqBT6ALU/UVgu8GW4GD3f6f9TRDYNJTDrk7YbtiqUumHwIYoUJuHERDAS0r4CvgFECgbY+cFAR7KT+g1POmCKFDNw6WggHc3fBtVb4CAoyauBgXIG+g1Xh5mRAGah6cggBd11fK/h7lOprIs0H6uRl6KAo5O7kOv4QmPiwJ4Jqqv4FiwCtXjvD2+tRmfK6kZ/ygI2HritK0rDVGgrClJ6DWMwYC/AGuCBMYcIC2V0CzvjmbRz3j3xUjn6CfeYreUJ2wQkGD75INPX1mFfsEFrrcIYCvdhC4paWQakxajpJMr0C9YFg54i7AsClRmh9/xnr0NHcInzZStk2aLwAcGMAD9pPIazvFKVDD5rdnhJeHLX5RTyRPQHpz5o66emMc9wdlPtvA8wF7Aq2BUHh1525qEo5JtR1WeOXpickO9cJIpyuD6xJmhYiZ5ytWSl3mlnuOaf+2zDaLDXmJrSgZ/MYVEugo+gSh+FkSBa4yd5Ul87DZ5XpFl/AyIEjzYjkau8WqshU2cr13HPbgX4gJOD97n465GZlyVvC9mSKloKI2iTnbwNT+gBX54H+IaXAtxJzE3ycSAFqSAFJACUkAikXD+AHj5/wx2o5osAAAAAElFTkSuQmCC) no-repeat center right;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  border: 1px solid #aaa;
+  display: block;
+  padding: 1em;
+  margin: 2em auto;
+  outline: none;
+  line-height: 2em;
+  width: 80%;
+}
+
+
+/* External styling from: https://codepen.io/manikoth/pen/NNNBYe.css
+ */
+/* Doodle Stage */
+#stage {
+  height: 375px;
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+#stage svg {
+  width: 100%;
+}
+
+#Line {
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 0;
+  animation: dash 5s linear infinite reverse;
+  opacity: 0.25;
+  stroke-width: 4px;
+}
+
+#Red-1 path {
+  -webkit-animation: float 5s 1.25s ease infinite;
+          animation: float 5s 1.25s ease infinite;
+  transition: -webkit-transform 1s 0.5s ease;
+  transition: transform 1s 0.5s ease;
+  transition: transform 1s 0.5s ease, -webkit-transform 1s 0.5s ease;
+}
+#Red-1:hover path, #Red-1:hover #eye {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: scale(1.15) translatey(-10%);
+          transform: scale(1.15) translatey(-10%);
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+#Red-1 #eye {
+  -webkit-animation: blink-fast-red 4s ease infinite, float 5s 1.25s ease infinite;
+          animation: blink-fast-red 4s ease infinite, float 5s 1.25s ease infinite;
+  transition: -webkit-transform 1s 0.5s ease;
+  transition: transform 1s 0.5s ease;
+  transition: transform 1s 0.5s ease, -webkit-transform 1s 0.5s ease;
+}
+
+#Blue-1 path {
+  -webkit-transform-origin: 7% 20%;
+          transform-origin: 7% 20%;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+#Blue-1:hover path, #Blue-1:hover #eye {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+#Blue-1 #eye {
+  -webkit-animation: blink-fast-blue 3s ease infinite;
+          animation: blink-fast-blue 3s ease infinite;
+}
+
+#Yellow #eye {
+  -webkit-animation: blink 3s ease infinite;
+          animation: blink 3s ease infinite;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+#Yellow path {
+  transition: all 0.25s ease;
+}
+#Yellow:hover path, #Yellow:hover #eye {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scaley(0.95);
+          transform: scaley(0.95);
+}
+#Yellow:hover #eye {
+  opacity: 0;
+}
+
+#Red-2 #eye {
+  -webkit-animation: blink-fast-red 6s ease infinite;
+          animation: blink-fast-red 6s ease infinite;
+}
+#Red-2:hover #eye {
+  fill: #D0021B;
+  -webkit-animation: none;
+          animation: none;
+}
+#Red-2 path {
+  transition: all 0.25s ease;
+}
+#Red-2:hover path {
+  -webkit-transform: translatex(15px);
+          transform: translatex(15px);
+}
+
+#Blue-2 #eye {
+  -webkit-animation: blink-fast-blue 3s ease infinite;
+          animation: blink-fast-blue 3s ease infinite;
+}
+#Blue-2 path {
+  transition: all 0.25s ease;
+}
+#Blue-2:hover path {
+  -webkit-transform: translate(-15px, 10px);
+          transform: translate(-15px, 10px);
+}
+
+#Green path {
+  -webkit-animation: hop 1.5s 2s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+          animation: hop 1.5s 2s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+@-webkit-keyframes blink {
+  0%, 5% {
+    -webkit-transform: scaley(1);
+            transform: scaley(1);
+  }
+  5%,7% {
+    -webkit-transform: scaley(0);
+            transform: scaley(0);
+  }
+  12%,100% {
+    -webkit-transform: scaley(1);
+            transform: scaley(1);
+  }
+}
+@keyframes blink {
+  0%, 5% {
+    -webkit-transform: scaley(1);
+            transform: scaley(1);
+  }
+  5%,7% {
+    -webkit-transform: scaley(0);
+            transform: scaley(0);
+  }
+  12%,100% {
+    -webkit-transform: scaley(1);
+            transform: scaley(1);
+  }
+}
+@-webkit-keyframes blink-fast-red {
+  0%, 5% {
+    fill: #D0021B;
+  }
+  6%, 100% {
+    fill: #FFF;
+  }
+}
+@keyframes blink-fast-red {
+  0%, 5% {
+    fill: #D0021B;
+  }
+  6%, 100% {
+    fill: #FFF;
+  }
+}
+@-webkit-keyframes blink-fast-blue {
+  0%, 5% {
+    fill: #0051AF;
+  }
+  6%, 100% {
+    fill: #FFF;
+  }
+}
+@keyframes blink-fast-blue {
+  0%, 5% {
+    fill: #0051AF;
+  }
+  6%, 100% {
+    fill: #FFF;
+  }
+}
+@-webkit-keyframes hop {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0);
+            transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(-100px);
+            transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) translateY(0);
+            transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(-7px);
+            transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes hop {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0);
+            transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(-100px);
+            transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) translateY(0);
+            transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(-7px);
+            transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
